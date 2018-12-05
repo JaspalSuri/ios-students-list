@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main Table View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="fDn-P6-0tW">
             <objects>
-                <viewController id="bzq-Lp-aCs" customClass="MainTableViewController" customModule="Students" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bzq-Lp-aCs" customClass="MainViewController" customModule="Students" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="15J-RY-mQ8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,10 +22,10 @@
                                 <rect key="frame" x="0.0" y="40" width="375" height="627"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S0X-qg-73U">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="28"/>
                                         <subviews>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="h74-1F-BG4">
-                                                <rect key="frame" x="107" y="0.0" width="161" height="43"/>
+                                                <rect key="frame" x="107" y="0.0" width="161" height="29"/>
                                                 <segments>
                                                     <segment title="FIrst Name"/>
                                                     <segment title="Last Name"/>
@@ -42,8 +42,14 @@
                                             <constraint firstItem="h74-1F-BG4" firstAttribute="top" secondItem="S0X-qg-73U" secondAttribute="top" id="ifl-63-0cl"/>
                                         </constraints>
                                     </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9oH-sO-0KR">
+                                        <rect key="frame" x="0.0" y="36" width="375" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJ5-oZ-pUw">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="577"/>
+                                        <rect key="frame" x="0.0" y="74" width="375" height="553"/>
                                         <connections>
                                             <segue destination="Ide-kh-yvJ" kind="embed" identifier="EmbedStudentsTableView" id="ud5-hq-U8R"/>
                                         </connections>
@@ -73,7 +79,7 @@
             <objects>
                 <tableViewController id="Ide-kh-yvJ" customClass="StudentsTableViewController" customModule="Students" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eME-tT-IUs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="553"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
